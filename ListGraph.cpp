@@ -1,7 +1,7 @@
 #pragma once
 #include"ListGraph.h"
 
-using std::vector
+using std::vector;
 
 ListGraph::ListGraph(int graph_size)
     : size(graph_size)
