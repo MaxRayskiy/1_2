@@ -5,14 +5,14 @@ using std::vector;
 
 SetGraph::SetGraph(int graph_size)
     : size(graph_size)
-    , SetOfPrevVertices(static_cast<unsigned int>(graph_size))
     , SetOfNextVertices(static_cast<unsigned int>(graph_size))
+    , SetOfPrevVertices(static_cast<unsigned int>(graph_size))
 {}
 
 SetGraph::SetGraph(const IGraph *other)
     : size(other->VerticesCount())
-    , SetOfPrevVertices(static_cast<unsigned int>(other->VerticesCount()))
     , SetOfNextVertices(static_cast<unsigned int>(other->VerticesCount()))
+    , SetOfPrevVertices(static_cast<unsigned int>(other->VerticesCount()))
 {
     for (int vertex = 0; vertex < size; ++vertex) {  // для каждой вершины
         std::vector<int> copy_vertices;
