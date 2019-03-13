@@ -5,7 +5,7 @@ using std::vector;
 
 MatrixGraph::MatrixGraph(int graph_size)
     : size(graph_size)
-    , adjacency _matrix(static_cast<unsigned int>(graph_size),
+    , adjacency_matrix(static_cast<unsigned int>(graph_size),
             vector<int>(static_cast<unsigned int>(graph_size)))
 {}
 
