@@ -6,8 +6,9 @@
 
 class MatrixGraph: public IGraph {
 private:
-    std::vector<std::vector<int>> graph;
     int size;
+    std::vector<std::vector<int>> graph;
+
 public:
     MatrixGraph(int graph_size);
     MatrixGraph(const IGraph *other);

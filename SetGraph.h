@@ -7,9 +7,10 @@
 
 class SetGraph: public IGraph {
 private:
+    int size;
     std::vector<std::unordered_set<int>> SetOfNextVertices;
     std::vector<std::unordered_set<int>> SetOfPrevVertices;
-    int size;
+
 public:
     SetGraph(int graph_size);
     SetGraph(const IGraph *other);
