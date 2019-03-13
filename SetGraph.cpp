@@ -1,4 +1,7 @@
+#pragma once
 #include"SetGraph.h"
+
+using std::vector;
 
 SetGraph::SetGraph(int graph_size)
     : size(graph_size)

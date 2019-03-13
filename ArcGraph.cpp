@@ -1,4 +1,7 @@
+#pragma once
 #include"ArcGraph.h"
+
+using std::vector
 
 ArcGraph::ArcGraph(int graph_size)
     : size(graph_size)

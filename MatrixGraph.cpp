@@ -1,4 +1,7 @@
+#pragma once
 #include"MatrixGraph.h"
+
+using std::vector;
 
 MatrixGraph::MatrixGraph(int graph_size)
     : size(graph_size)
