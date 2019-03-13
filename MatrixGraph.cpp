@@ -23,8 +23,7 @@ MatrixGraph::MatrixGraph(const IGraph *other)
         std::vector<int> copy_vertices;
         GetNextVertices(vertex, copy_vertices);  // узнаем следующие от нее вершины
         for(const auto next_vertex : copy_vertices) {
-            graph[vertex][next_vertex] = 1;
-            graph[next_vertex][vertex] = 1;
+            AddEdge(vertex, next_vertex);
         }
     }
 }
