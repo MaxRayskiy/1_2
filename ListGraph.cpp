@@ -16,7 +16,7 @@ ListGraph::ListGraph(const IGraph *other)
 {
     for (int vertex = 0; vertex < size; ++vertex) {  // для каждой вершины
         std::vector<int> copy_vertices;
-        GetNextVertices(vertex, copy_vertices);  // узнаем следующие от нее вершины
+        other->GetNextVertices(vertex, copy_vertices);  // узнаем следующие от нее вершины
         for (const auto next_vertex : copy_vertices) {
             AddEdge(vertex, next_vertex);
         }
@@ -24,8 +24,8 @@ ListGraph::ListGraph(const IGraph *other)
 }
 
 void ListGraph::AddEdge(int from, int to) {
-    ListOfNextVertices[from].push_front(to);
-    ListOfPrevVertices[to].push_front(from);
+    ListOfNextVertices[from].push_back(to);
+    ListOfPrevVertices[to].push_back(from);
 }
 
 int ListGraph::VerticesCount() const  {

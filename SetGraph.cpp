@@ -16,7 +16,7 @@ SetGraph::SetGraph(const IGraph *other)
 {
     for (int vertex = 0; vertex < size; ++vertex) {  // для каждой вершины
         std::vector<int> copy_vertices;
-        GetNextVertices(vertex, copy_vertices);  // узнаем следующие от нее вершины
+        other->GetNextVertices(vertex, copy_vertices);  // узнаем следующие от нее вершины
         for (const auto next_vertex : copy_vertices) {
             AddEdge(vertex, next_vertex);
         }
