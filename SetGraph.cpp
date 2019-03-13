@@ -29,6 +29,7 @@ int SetGraph::VerticesCount() const  {
 
 void SetGraph::AddEdge(int from, int to) {
     SetOfNextVertices[from].insert(to);
+    SetOfPrevVertices[to].insert[from];
 }
 
 void SetGraph::GetNextVertices(int vertex, std::vector<int>& vertices) const {
