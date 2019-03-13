@@ -24,8 +24,8 @@ ListGraph::ListGraph(const IGraph *other)
 }
 
 void ListGraph::AddEdge(int from, int to) {
-    ListOfNextVertices[from].push_back(to);
-    ListOfPrevVertices[to].push_back(from);
+    ListOfNextVertices[from].push_front(to);
+    ListOfPrevVertices[to].push_front(from);
 }
 
 int ListGraph::VerticesCount() const  {

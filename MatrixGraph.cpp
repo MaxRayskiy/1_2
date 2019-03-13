@@ -5,20 +5,13 @@ using std::vector;
 
 MatrixGraph::MatrixGraph(int graph_size)
     : size(graph_size)
-    , graph(static_cast<unsigned int>(graph_size))
-{
-    for (int i = 0; i < graph_size; ++i) {
-        graph[i].resize(static_cast<unsigned int>(graph_size));
-    }
-}
+    , graph(static_cast<unsigned int>(graph_size), vector<int>static_cast<unsigned int>(graph_size))
+{}
 
 MatrixGraph::MatrixGraph(const IGraph *other)
     : size(other->VerticesCount())
-    , graph(static_cast<unsigned int>(other->VerticesCount()))
+    , graph(static_cast<unsigned int>(other->VerticesCount()), vector<int>static_cast<unsigned int>(other->VerticesCount()))
 {
-    for (int i = 0; i < size; ++i) {
-        graph[i].resize((static_cast<unsigned int>(size)));
-    }
     for (int vertex = 0; vertex < size; ++vertex) {  // для каждой вершины
         std::vector<int> copy_vertices;
         GetNextVertices(vertex, copy_vertices);  // узнаем следующие от нее вершины
