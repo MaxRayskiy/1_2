@@ -19,5 +19,5 @@ public:
     void GetNextVertices(int vertex, std::vector<int>& vertices) const override;
     void GetPrevVertices(int vertex, std::vector<int>& vertices) const override;
 
-    //~ListGraph() = default;
+    ~ListGraph() = default;
 };
