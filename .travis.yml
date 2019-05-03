@@ -1,34 +1,18 @@
-sudo: required
+sudo: false
 
-language: cpp
-
-os:
-  - linux
-
-compiler:
-  - gcc
+language:
+    - cpp
 
 addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
+    apt:
+      sources:
+        - ubuntu-toolchain-r-test
+
+before_install:
+    - pip install --user cpp-coveralls
 
 script:
-  - wget https://github.com/google/googletest/archive/release-1.8.0.tar.gz
-  - tar xf release-1.8.0.tar.gz
-  - cd googletest-release-1.8.0
-  - cmake -DBUILD_SHARED_LIBS=ON .
-  - make
-  - cp -a include/gtest /usr/include
-  - cp -a libgtest_main.so libgtest.so /usr/lib/
-  - sudo ldconfig -v | grep gtest
-  - GTEST_ROOT=$TRAVIS_BUILD_DIR/googletest-release-1.8.0/googletest
-  - cd
-  - cd build/MaxRayskiy/1_2
-  - cmake CMakeLists.txt
-  - make ./executeTests
-  - ./executeTests
-
-
-notifications:
-  email: true
+    - mkdir build
+    - cd build
+    - cmake ..
+    - cmake --build .
