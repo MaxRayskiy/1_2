@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 
-project(gtest-demo CXX)
+project(1_2)
 
 include(cmake/googletest.cmake)
 fetch_googletest(
