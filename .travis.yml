@@ -12,5 +12,6 @@ addons:
 script:
     - mkdir build
     - cd build
-    - cmake ..
-    - cmake --build .
+    - cmake CMAkeLists.txt
+    - make ./executeTests
+    - ./executeTests
