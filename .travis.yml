@@ -5,8 +5,9 @@ language: cpp
 compiler: gcc
 
 script:
-  - sudo cmake CMakeLists.txt
-  - sudo make ./executeTests
+  - cmake CMakeLists.txt
+  - make ./executeTests
+  - ./executeTests
 
 
 
