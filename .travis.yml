@@ -14,8 +14,9 @@ addons:
     - ubuntu-toolchain-r-test
 
 script:
-  - cmake --version
   - cmake CMakeLists.txt
+  - make ./executeTests
+  - ./executeTests
 
 
 notifications:
