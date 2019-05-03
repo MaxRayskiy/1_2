@@ -30,6 +30,6 @@ script:
     - g++ graph_test.cpp -std=c++17 -o travis_gcc_cpp17
     - ./travis_gcc_cpp17
 
-    - cmake CMAkeLists.txt
+    - cmake CMakeLists.txt
     - make ./executeTests
     - ./executeTests
