@@ -8,6 +8,11 @@ os:
 compiler:
   - gcc
 
+addons:
+  apt:
+    sources:
+  - ubuntu-toolchain-r-test
+
 script:
   - cmake --version
   - cmake CMakeLists.txt
