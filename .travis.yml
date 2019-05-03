@@ -1,12 +1,19 @@
-sudo: required
-
-language:
-  - cpp
+sudo: false
+language: cpp
+compiler:
+  - gcc
+  - clang
+os:
+  - linux
 
 addons:
-    apt:
-      sources:
-        - ubuntu-toolchain-r-test
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-4.8
+      - g++-4.8
+  - clang
 
 
 script:
