@@ -27,6 +27,7 @@ script:
   - cp -a libgtest_main.so libgtest.so /usr/lib/
   - sudo ldconfig -v | grep gtest
   - cd
+  - cd build/MaxRayskiy/1_2
   - cmake CMakeLists.txt
   - make ./executeTests
   - ./executeTests
