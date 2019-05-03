@@ -1,8 +1,6 @@
 #include "graph.cpp"
 #include <algorithm>
 
-#include "gtest/gtest.h"
-
 class TestListGraph : public testing::Test {
  protected:
   ListGraph* graph;
