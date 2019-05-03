@@ -7,7 +7,7 @@
 class ArcGraph: public IGraph {
 private:
     int size;
-    std::vector<std::pair<int,int>> edges;  // начальная вершина + конечная вершина
+    std::vector<std::pair<int, int> > edges;  // начальная вершина + конечная вершина
 
 public:
     ArcGraph(int graph_size);

@@ -7,7 +7,7 @@
 class MatrixGraph: public IGraph {
 private:
     int size;
-    std::vector<std::vector<int>> adjacency_matrix;
+    std::vector<std::vector<int> > adjacency_matrix;
 
 public:
     MatrixGraph(int graph_size);

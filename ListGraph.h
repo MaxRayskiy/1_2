@@ -7,8 +7,8 @@
 class ListGraph: public IGraph {
 private:
     int size;
-    std::vector<std::vector<int>> ListOfNextVertices;
-    std::vector<std::vector<int>> ListOfPrevVertices;
+    std::vector<std::vector<int> > ListOfNextVertices;
+    std::vector<std::vector<int> > ListOfPrevVertices;
 public:
     ListGraph(int graph_size);
     ListGraph(const IGraph *other);
