@@ -5,14 +5,19 @@ language: cpp
 os:
   - linux
 
+install:
+  # скрипт настройки среды и установки зависимостей:
+  - source ci/travis/install-$TRAVIS_OS_NAME.sh
+
 compiler:
   - gcc
 
 script:
+  - mkdir build
+  - cd build
   - cmake CMakeLists.txt
   - make ./executeTests
   - ./executeTests
-
 
 
 notifications:
